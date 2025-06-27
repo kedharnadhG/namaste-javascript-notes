@@ -207,7 +207,7 @@ handlePromise();
 
 ```js
 async function handlePromise() {
-  // fetch() => Response Object which as body as Readable stream => Response.json() is also a promise which when resolved => value
+  // fetch() => (itself it's a promise) returns Response Object which has body i.e Readable stream => to read that in json-format we do Response.json() i.e is also a promise which when resolved => gives json-value
   const data = await fetch("https://api.github.com/users/alok722");
   const res = await data.json();
   console.log(res);
