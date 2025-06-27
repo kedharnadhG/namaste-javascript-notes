@@ -38,8 +38,8 @@ What if any of the promise gets rejected, for eg: Promise.all([p1, p2, p3]). But
 
 💡 Promise.all() -> Fail Fast  
 💡 Promise.allSettled() -> Will wait and provide accumulative result
-
-### Promise.race()
+ 
+### Promise.race()                  (waits for the first promise to be settled irrespective of the result) 
 
 > The Promise.race() static method accepts a list of promises as an iterable object and returns a new promise that fulfills or rejects as soon as there is one promise that fulfills or rejects, with the value or reason from that promise. The name of Promise.race() implies that all the promises race against each other with a single winner, either resolved or rejected.
 
@@ -47,7 +47,7 @@ Promise.race([p1, p2, p3]) -> Lets assume we are making 3 API call to fetch data
 
 So in Happy scenario, Promise.race will give (val2) as output after 1sec as p2 got resolved at the earliest. Whereas if it would have been failed Promise.race would have still given output after 1 sec but this time with error.
 
-### Promise.any()
+### Promise.any()             (waits for the first promise to be resolved/fulfilled)
 
 > The Promise.any() method accepts a list of Promise objects as an iterable object. If one of the promises in the iterable object is fulfilled, the Promise.any() returns a single promise that resolves to a value which is the result of the fulfilled promise.
 
