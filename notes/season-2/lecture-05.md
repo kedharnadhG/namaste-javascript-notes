@@ -47,7 +47,7 @@ Promise.race([p1, p2, p3]) -> Lets assume we are making 3 API call to fetch data
 
 So in Happy scenario, Promise.race will give (val2) as output after 1sec as p2 got resolved at the earliest. Whereas if it would have been failed Promise.race would have still given output after 1 sec but this time with error.
 
-### Promise.any()             (waits for the first promise to be resolved/fulfilled)
+### Promise.any()             (waits for the first success of the promises)
 
 > The Promise.any() method accepts a list of Promise objects as an iterable object. If one of the promises in the iterable object is fulfilled, the Promise.any() returns a single promise that resolves to a value which is the result of the fulfilled promise.
 
